@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>DEETZZ SNAKE</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <canvas id="game"></canvas>
+
+  <header>
+    <div class="title">🐍 DEETZZ SNAKE</div>
+    <div class="stats">
+      <span>⭐ <b id="score">0</b></span>
+      <span>🏆 <b id="best">0</b></span>
+    </div>
+  </header>
+
+  <div id="menu" class="screen">
+    <div class="card">
+      <div class="snakeIcon">🐍</div>
+      <h1>DEETZZ<br><span>SNAKE</span></h1>
+      <p>Makan makanan, tumbuh semakin panjang, dan jangan menabrak tubuh sendiri!</p>
+      <button id="play" class="primary">▶ MULAI</button>
+      <button id="how" class="secondary">❔ CARA BERMAIN</button>
+    </div>
+  </div>
+
+  <div id="howScreen" class="screen hidden">
+    <div class="card">
+      <h2>❔ CARA BERMAIN</h2>
+      <p>📱 Geser / gunakan tombol arah di bawah.</p>
+      <p>🍎 Makan makanan untuk mendapat score.</p>
+      <p>🐍 Ular akan semakin panjang.</p>
+      <p>💥 Jangan menabrak dinding atau tubuh sendiri.</p>
+      <button id="back" class="primary">KEMBALI</button>
+    </div>
+  </div>
+
+  <div id="gameOver" class="screen hidden">
+    <div class="card">
+      <div class="snakeIcon">💥</div>
+      <h2>GAME OVER</h2>
+      <p>Score: <b id="finalScore">0</b></p>
+      <p>Best: <b id="finalBest">0</b></p>
+      <button id="again" class="primary">🔄 MAIN LAGI</button>
+      <button id="home" class="secondary">⌂ MENU</button>
+    </div>
+  </div>
+
+  <div id="touch">
+    <button data-dir="up">▲</button>
+    <div>
+      <button data-dir="left">◀</button>
+      <button data-dir="down">▼</button>
+      <button data-dir="right">▶</button>
+    </div>
+  </div>
+
+  <div id="toast"></div>
+</div>
+<script src="game.js"></script>
+</body>
+</html>
